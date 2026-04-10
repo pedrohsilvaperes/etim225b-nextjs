@@ -19,7 +19,7 @@ export function FormComponent() {
                 value={formData.nome}
                 onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
             />
-            <button type="submit">Enviar Cadastro</button>
+            <button type="submit"> +1 </button>
         </form>
     );
 }
