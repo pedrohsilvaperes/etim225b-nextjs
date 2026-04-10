@@ -1,25 +1,43 @@
-'use class'
+'use client'
 
-import { useState } from 'react';
-export function FormComponent() {
-    const [formData, setFormData] = useState({ nome: '', email: '' });
+import { useState } from "react";
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Enviando para API:", formData);
-        // Aqui você faria um POST para sua API
-    };
+import styles from './page.module.css';
+
+export default function Atividade02() {
+
+    const [num, setNum] = useState(100);
+
+    function handleIncrementa() {
+        setNum(num + 1);
+    }
+
+    function handleDecrementa() {
+        setNum(num - 1);
+    }
 
     return (
-        <form onSubmit={handleSubmit} style={{ maxWidth: '400px' }}>
-            <label htmlFor="user">Nome do Usuário:</label>
-            <input
-                id="user"
-                type="text"
-                value={formData.nome}
-                onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-            />
-            <button type="submit"> +1 </button>
-        </form>
+        <div className={styles.container}> 
+        <h1>Atividade 2</h1>
+        <p>Contardor incrementando e decrementando com uso de useState do React</p>
+        <br /><br /><br />
+            <div className={styles.containerOperacoes}>
+                <div className={styles.containerLabel}>
+                    <label
+                        onClick={() => handleDecrementa()}
+                        className={styles.botao}
+                    >-1</label>
+                </div>
+                <div className={styles.containerLabel}>
+                    <label className={styles.texto}>{`Contador: ${num}`}</label>
+                </div>
+                <div className={styles.containerLabel}>
+                    <label
+                        onClick={() => handleIncrementa()}
+                        className={styles.botao}
+                    >+1</label>
+                </div>
+            </div>
+        </div>
     );
 }

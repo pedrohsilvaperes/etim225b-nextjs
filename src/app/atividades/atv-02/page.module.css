@@ -1,20 +1,33 @@
-.containerHome {
+.container {
     display: flex;
     flex-direction: column; 
-    align-items: center; 
-    justify-content: space-evenly;
-    height: 95vh;
-    width: 100%;
-    max-width: 124rem;
+    height: 96vh;
+    justify-content: center;
 }
 
-.containerListas {     
+.containerOperacoes {
     display: flex; 
-    flex-direction: column;
-    border: 0.2rem solid #f00; 
-    height: 45vh; 
-    width: 100%; 
+    flex-direction: row; 
+}
+
+.containerLabel {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    font-size: 3.5rem; 
+    margin: 2rem 1rem;
+}
+
+.botao {
+    font-size: 3rem;
+    border: 0.3rem solid #000;
     border-radius: 1rem; 
+    text-align: center; 
+    font-weight: bold; 
     padding: 1rem; 
-    overflow-y: auto;
+    width: 7rem;
 }
