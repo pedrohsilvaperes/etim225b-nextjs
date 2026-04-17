@@ -1,4 +1,6 @@
-export function Seletores() {
+'use client'
+import { useState } from 'react';
+export default function InputsComplexos() {
     const [genero, setGenero] = useState("M");
     const [termos, setTermos] = useState(false);
 

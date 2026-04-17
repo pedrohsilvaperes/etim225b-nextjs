@@ -125,6 +125,20 @@
 
     .form button {
         width: 100%;
-        /* Botão ocupa tudo no mobile */
     }
+}
+
+.form button {
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form button:hover {
+    background-color: #2563eb;
 }

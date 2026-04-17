@@ -1,6 +1,8 @@
+'use client'
+
 import { useState, useEffect } from 'react';
 
-export function InputsComplexos() {
+export default function InputsComplexos() {
     const [categorias, setCategorias] = useState([]);
     const [valor, setValor] = useState("");
     const [comentario, setComentario] = useState("");
